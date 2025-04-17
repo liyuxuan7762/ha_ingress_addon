@@ -1,5 +1,4 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM alpine:3.18
 
 # 安装必要的包
 RUN apk add --no-cache python3 py3-pip nginx
