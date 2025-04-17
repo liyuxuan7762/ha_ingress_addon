@@ -1,0 +1,29 @@
+name: "Internal Web Pages"
+version: "1.0.0"
+slug: "internal_web_pages"
+description: "在Home Assistant中嵌入内网Web页面"
+url: "https://github.com/yourusername/ha-internal-web-pages"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+ingress: true
+ingress_port: 8099
+ports:
+  8099/tcp: null
+options:
+  pages:
+    - name: "示例页面"
+      url: "http://192.168.1.100"
+      icon: "mdi:web"
+schema:
+  pages:
+    - name: str
+      url: str
+      icon: str
+init: false
+webui: "http://[HOST]:[PORT:8099]" 
